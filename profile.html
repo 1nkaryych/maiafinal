@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Bijouterie Boutique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="profile-header-split">
+  <!-- Splash line on top -->
+  <div class="splash-line"></div>
+
+  <!-- Left side: background video -->
+  <div class="video-side">
+    <video autoplay muted loop playsinline>
+      <source src="images/video/profile-bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Right side: navbar + welcome text -->
+  <div class="text-side">
+    <div class="nav-container">
+      <div class="container header-flex">
+        <img src="images/logo.png" alt="Bijouterie Boutique Logo" style="width: 75px; height: 75px;">
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="auth.html" id="auth-link" style="display:none;">Login</a></li>
+            <li><a href="profile.html" id="profile-link" class="active">Profile</a></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+          </ul>
+        </nav>
+        <div class="theme-toggle">
+          <button id="theme-switcher">🌙</button>
+        </div>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome text -->
+    <div class="welcome-box">
+      <h1>Welcome Back to MAIA Bijouterie Boutique</h1>
+      <p>Step into your world of elegance — manage your account, explore curated collections, and rediscover timeless beauty.</p>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="profile-hero">
+    <div class="container">
+      <h1>My Profile</h1>
+      <p>Manage your account and preferences</p>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-container">
+        <div class="profile-header">
+          <div class="profile-avatar">
+            <div class="avatar-placeholder">
+              <span id="user-initials">U</span>
+            </div>
+          </div>
+          <h2 id="user-greeting">Welcome, User!</h2>
+          <p>Member since <span id="member-since">2024</span></p>
+        </div>
+
+        <div class="profile-info">
+          <h3>Personal Information</h3>
+          <div class="profile-field">
+            <strong>Full Name:</strong>
+            <span id="profile-name">Loading...</span>
+          </div>
+          <div class="profile-field">
+            <strong>Email:</strong>
+            <span id="profile-email">Loading...</span>
+          </div>
+          <div class="profile-field">
+            <strong>Phone:</strong>
+            <span id="profile-phone">Loading...</span>
+          </div>
+          <div class="profile-field">
+            <strong>Account Type:</strong>
+            <span id="profile-type">Standard Member</span>
+          </div>
+        </div>
+
+        <div class="profile-actions">
+          <h3>Account Actions</h3>
+          <div class="action-buttons">
+            <button id="edit-profile" class="action-btn">Edit Profile</button>
+            <button id="change-password" class="action-btn">Change Password</button>
+            <button id="view-orders" class="action-btn">Order History</button>
+            <button id="manage-wishlist" class="action-btn">My Wishlist</button>
+          </div>
+        </div>
+
+        <div class="profile-preferences">
+          <h3>Preferences</h3>
+          <div class="preference-item">
+            <label>
+              <input type="checkbox" id="newsletter-pref" checked>
+              Receive newsletter and promotions
+            </label>
+          </div>
+          <div class="preference-item">
+            <label>
+              <input type="checkbox" id="sms-pref">
+              Receive SMS notifications
+            </label>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <h3>Your Activity</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" id="orders-count">0</div>
+              <div class="stat-label">Orders</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="wishlist-count">0</div>
+              <div class="stat-label">Wishlist Items</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="reviews-count">0</div>
+              <div class="stat-label">Reviews</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="member-years">1</div>
+              <div class="stat-label">Years as Member</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-danger-zone">
+          <h3>Danger Zone</h3>
+          <p>Permanently delete your account and all associated data.</p>
+          <button id="delete-account" class="danger-btn">Delete Account</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container container">
+    <div class="footer-logo">
+      <img src="images/logo.png" alt="Bijouterie Boutique Logo" class="footer-logo-img">
+      <p class="footer-brand">MAIA Bijouterie Boutique</p>
+      <small>Luxury Jewelry Since 2025</small>
+    </div>
+
+    <div class="footer-links">
+      <h6>QUICK LINKS</h6>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-subscribe">
+      <h6>NEWSLETTER</h6>
+      <form id="footer-newsletter" class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="footer-contacts">
+      <h6>CONTACTS</h6>
+      <div class="footer-contacts-content">
+        <div class="footer-contacts-left">
+          <p>Kazakhstan, Astana, Astana IT University, 3rd floor, C1.1.354</p>
+          <p>Mon — Sat 10:00–20:00</p>
+        </div>
+        <div class="footer-contacts-right">
+          <p><strong>+7 700 000 00 00</strong></p>
+          <p><strong>+7 701 111 11 11</strong></p>
+          <p><strong>+7 708 464 54 09</strong></p> <!-- ✅ Added your phone number -->
+        </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Bijouterie Boutique | Developed by <strong>A. Inkar</strong>, <strong>M. Aidos</strong>, <strong>U. Aruzhan</strong>, <strong>T. Meiirzhan</strong> (IT-2408)</p>
+  </div>
+</footer>
+  </div
+  <script src="js/script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/auth.js"></script>

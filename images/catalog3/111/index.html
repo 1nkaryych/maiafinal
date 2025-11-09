@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bijouterie Boutique - Luxury Jewelry</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-flex">
+    <img src="images/logo.png" alt="Bijouterie Boutique Logo" style="width: 75px; height: 75px;">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Collections</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="auth.html" id="auth-link">Login</a></li>
+        <li><a href="profile.html" id="profile-link" style="display:none;">Profile</a></li>
+        <li><a href="#" id="logout-btn" style="display:none;">Logout</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <button id="theme-switcher">🌙</button>
+    </div>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="images/video/video3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</header>
+
+<main>
+ <section id="rollers" class="carousel-section1">
+  <h2>Exclusive Louvre Collection</h2>
+  <div class="carousel-container">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track')">
+      &#10094;
+    </button>
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-card">
+        <img src="images/marie-louise.png" alt="The Marie-Louise necklace - diamond and emerald masterpiece">
+        <h5>The Marie-Louise necklace</h5>
+        <p>35 300 000 kzt</p>
+      </div>
+      <div class="carousel-card">
+        <img src="images/tiara.png" alt="Empress Eugenie tiara - royal gold and diamond headpiece">
+        <h5>A tiara worn by the Empress Eugenie, wife of Napoleon III</h5>
+        <p>115 500 000 kzt</p>
+      </div>
+      <div class="carousel-card">
+        <img src="images/empress.png" alt="Empress jewel-encrusted bow - ruby and diamond accessory">
+        <h5>A large jewel-encrusted bow which belonged to the Empress</h5>
+        <p>86 000 000 kzt</p>
+      </div>
+      <div class="carousel-card">
+        <img src="images/earringsofqueen.png" alt="Queen Marie-Amelia earrings - pearl and diamond drops">
+        <h5>Earrings of Queen Marie-Amelia</h5>
+        <p>96 000 000 kzt</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators"></div>
+</section>
+
+ <section id="blinds" class="carousel-section2">
+  <h2>Necklaces</h2>
+  <div class="carousel-container2">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track2')">
+      &#10094;
+    </button>
+    <div class="carousel-track2" id="carousel-track2">
+      <div class="carousel-card2">
+        <img src="images/second images/nekcleces1.png" alt="Icon Round Diamond Pendant - minimalist diamond necklace">
+        <h5>Icon Round Diamond Pendant</h5>
+        <p>1 600 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/second images/neckleces2.webp" alt="Icon Heart Shape Diamond Pendant - romantic heart design">
+        <h5>Icon Heart Shape Diamond Pendant</h5>
+        <p>3 200 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/second images/neckleces3.png" alt="Butterfly Silhouette Diamond Mini Pendant - delicate butterfly design">
+        <h5>Butterfly Silhouette Diamond Mini Pendant</h5>
+        <p>3 500 000 kzt</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track2')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators2"></div>
+</section>
+
+ <section class="carousel-section1">
+  <h2>Bracelets & Bangles</h2>
+  <div class="carousel-container">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track3')">
+      &#10094;
+    </button>
+    <div class="carousel-track" id="carousel-track3">
+      <div class="carousel-card">
+        <img src="images/third images/bracelets1.png" alt="Round Diamond Slim Bracelet - elegant diamond tennis bracelet">
+        <h5>Round Diamond Slim Bracelet</h5>
+        <p>18 000 000 kzt</p>
+      </div>
+      <div class="carousel-card">
+        <img src="images/third images/bracelets2.png" alt="Round Diamond Slim Bracelet - classic diamond line bracelet">
+        <h5>Round Diamond Slim Bracelet</h5>
+        <p>8 500 000 kzt</p>
+      </div>
+      <div class="carousel-card">
+        <img src="images/third images/bracelets3.png" alt="Slim Emerald Cut Diamond Bracelet - sophisticated emerald cut diamonds">
+        <h5>Slim Emerald Cut Diamond Bracelet</h5>
+        <p>87 000 000 kzt</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track3')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators3"></div>
+</section>
+
+ <section id="plisse" class="carousel-section2">
+  <h2>Earrings</h2>
+  <div class="carousel-container2">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track4')">
+      &#10094;
+    </button>
+    <div class="carousel-track2" id="carousel-track4">
+      <div class="carousel-card2">
+        <img src="images/fourth images/earrings1.png" alt="Wooden Bead Bracelets - natural wood and gold combination">
+        <h5>Wooden Bead Bracelets</h5>
+        <p>4 500 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/fourth images/earrings2.png" alt="Icon Pear Shape Diamond Earrings - elegant pear drop earrings">
+        <h5>Icon Pear Shape Diamond Earrings</h5>
+        <p>7 500 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/fourth images/earrings3.png" alt="Icon Heart Shape Diamond Stud Earrings - romantic heart studs">
+        <h5>Icon Heart Shape Diamond Stud Earrings</h5>
+        <p>6 000 000 kzt</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track4')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators4"></div>
+</section>
+
+<section id="whyus" class="advantages-section">
+  <h2>Why Choose Us</h2>
+  <div class="advantages-container">
+    <div class="advantage-card">
+      <img src="images/five/photo_5188203675208776409_m.jpg" alt="Ethical materials and craftsmanship icon">
+      <h3>Ethical Materials & Craftsmanship</h3>
+      <p>Responsibly sourced metals and stones, handcrafted by experienced jewelers.</p>
+    </div>
+    <div class="advantage-card">
+      <img src="images/five/photo_5188203675208776404_m.jpg" alt="Custom design and personalization icon">
+      <h3>Custom Design & Personalization</h3>
+      <p>Made-to-order sizing, engraving, and bespoke designs to match your style.</p>
+    </div>
+    <div class="advantage-card">
+      <img src="images/five/photo_5188203675208776406_m.jpg" alt="Lifetime care and warranty icon">
+      <h3>Lifetime Care & Warranty</h3>
+      <p>Complimentary cleaning, resizing, and a warranty that protects your piece.</p>
+    </div>
+    <div class="advantage-card">
+      <img src="images/five/photo_5188203675208776408_m.jpg" alt="Fast secure delivery icon">
+      <h3>Fast, Secure Delivery</h3>
+      <p>Insured packaging, timely delivery, and clear updates from checkout to doorstep.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="promo-banner">
+  <div class="promo-content">
+    <h1>Save 20%<br>on Selected Jewelry</h1>
+    <p>Offer valid until the end of the month</p>
+    <a href="contacts.html" class="promo-button">Message us</a>
+  </div>
+</section>
+
+<section id="portfolio" class="works-section">
+  <h2>Our Creations</h2>
+  <div class="works-gallery">
+    <div class="work-item">
+      <img src="images/ourwork1.png" alt="Custom engagement ring with brilliant cut diamond">
+    </div>
+    <div class="work-item">
+      <img src="images/ourwork2.png" alt="Vintage inspired necklace with sapphire centerpiece">
+    </div>
+    <div class="work-item">
+      <img src="images/ourwork3.png" alt="Modern geometric earrings with mixed metals">
+    </div>
+    <div class="work-item">
+      <img src="images/ourwork4.png" alt="Art deco bracelet with emerald and diamond pattern">
+    </div>
+  </div>
+</section>
+
+<section class="aboutus-banner">
+  <div class="aboutus-content">
+    <h1>About Us</h1>
+    <p>We are a boutique bijouterie studio crafting elegant, everyday jewelry that compliments your unique style.</p>
+    <p>From design to finishing, every piece is checked for comfort, durability, and shine—so you can wear it with confidence, day after day.</p>
+  </div>
+</section>
+
+<section id="reviews" class="reviews-section1">
+  <h2>Customer Reviews</h2>
+    <div class="reviews-track" id="reviews-track">
+      <div class="reviews-card">
+        <h3>Arista Hotels</h3>
+        <p>"Elegant, durable pieces that elevate our guest experience. Timely delivery and flawless finishing."</p>
+      </div>
+      <div class="reviews-card">
+        <h3>Vela Fashion Group</h3>
+        <p>"Custom pendants for our campaign looked stunning on set. Great communication and craftsmanship."</p>
+      </div>
+      <div class="reviews-card">
+        <h3>Nordic Events Co.</h3>
+        <p>"Corporate gifts were thoughtfully packaged and received rave reviews. We'll reorder next quarter."</p>
+      </div>
+    </div>
+</section>
+
+<section class="info-section">
+  <div class="info-container">
+    <div class="info-image">
+      <img src="images/fon1.png" alt="Jewelry crafting process - artisan working on fine jewelry">
+    </div>
+    <div class="info-text">
+      <h2>How We Craft and Deliver</h2>
+      <p>Every order is carefully packaged and delivered on time, with guidance on care to keep your jewelry shining.</p>
+    </div>
+  </div>
+</section>
+
+<section class="works-section">
+  <h2>Gallery</h2>
+  <div class="works-gallery">
+    <div class="work-item">
+      <img src="images/gallery/whitegoldchain.jpg" alt="Laurence Graff Signature Faceted Double-Strand Chain Necklace">
+    </div>
+    <div class="work-item">
+      <img src="images/gallery/earrings.jpg" alt="Diamond drop earrings with platinum setting">
+    </div>
+    <div class="work-item">
+      <img src="images/gallery/butterfly.png" alt="Butterfly motif necklace with colored gemstones">
+    </div>
+    <div class="work-item">
+      <img src="images/gallery/butterflyring.webp" alt="Butterfly design ring with diamond accents">
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="questions-banner">
+  <div class="questions-content">
+    <h1>Have any questions?</h1>
+    <p>Leave a request! Our manager will contact you with a tailored offer.</p>
+    <a href="contacts.html" class="questions-button">Contact Us</a>
+  </div>
+</section>
+
+<section class="partners-section">
+  <h2>Partners & Clients</h2>
+  <div class="work-container">
+    <div class="work-card">
+      <img src="images/photo_5188203675208776616_x.jpg" alt="Luxury hotel partner logo">
+    </div>
+    <div class="work-card">
+      <img src="images/photo_5188203675208776616_x.jpg" alt="Fashion brand partner logo">
+    </div>
+    <div class="work-card">
+      <img src="images/photo_5188203675208776616_x.jpg" alt="Corporate client logo">
+    </div>
+    <div class="work-card">
+      <img src="images/photo_5188203675208776616_x.jpg" alt="Event company partner logo">
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/WhatsApp Image 2025-10-27 at 11.44.34.jpeg" alt="Bijouterie Boutique Logo">
+      <p>Bijouterie Boutique</p>
+      <small>Luxury Jewelry Since 2010</small>
+    </div>
+
+    <div class="footer-contacts">
+      <h6>CONTACTS</h6>
+      <div class="footer-contacts-content">
+        <div class="footer-contacts-left">
+          <p>Kazakhstan, Astana, Astana IT University, 3rd floor, C1.1.350</p>
+          <p>Mon — Sat 10:00–20:00</p>
+        </div>
+        <div class="footer-contacts-right">
+          <p><strong>+7–700–000–00–00</strong></p>
+          <p><strong>+7–701–111–11–11</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-button">
+      <a href="contacts.html">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Tazdarbay Meiirzhan, Mukhamejanov Aidos, Uatkanova Aruzhan, Abdimazhit Inkar IT-2408
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="theme.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

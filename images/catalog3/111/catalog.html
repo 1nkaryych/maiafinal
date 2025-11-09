@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewelry Catalog - Bijouterie Boutique</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-flex">
+    <img src="images/logo.png" alt="Bijouterie Boutique Logo" style="width: 75px; height: 75px;">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html" class="active">Catalog</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="auth.html" id="auth-link">Login</a></li>
+        <li><a href="profile.html" id="profile-link" style="display:none;">Profile</a></li>
+        <li><a href="#" id="logout-btn" style="display:none;">Logout</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <button id="theme-switcher">🌙</button>
+    </div>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="catalog-header">
+    <div class="container">
+      <h1>Our Jewelry Collection</h1>
+      <p>Discover exquisite pieces crafted with precision and passion</p>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="container">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search jewelry by name...">
+        <select id="price-filter">
+          <option value="">All Prices</option>
+          <option value="0-5000000">Under 5M kzt</option>
+          <option value="5000000-20000000">5M - 20M kzt</option>
+          <option value="20000000-100000000">20M - 100M kzt</option>
+          <option value="100000000-9999999999">Over 100M kzt</option>
+        </select>
+        <select id="category-filter">
+          <option value="">All Categories</option>
+          <option value="necklace">Necklaces</option>
+          <option value="bracelet">Bracelets</option>
+          <option value="earrings">Earrings</option>
+          <option value="ring">Rings</option>
+          <option value="tiara">Tiaras</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="container">
+      <div id="products-container" class="products-grid">
+        <!-- Products will be loaded dynamically by JavaScript -->
+      </div>
+      <div id="no-results" style="display: none; text-align: center; padding: 2rem;">
+        <h3>No products found</h3>
+        <p>Try adjusting your search criteria</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to receive updates on new collections and exclusive offers</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/WhatsApp Image 2025-10-27 at 11.44.34.jpeg" alt="Bijouterie Boutique Logo">
+      <p>Bijouterie Boutique</p>
+      <small>Luxury Jewelry Since 2010</small>
+    </div>
+
+    <div class="footer-contacts">
+      <h6>CONTACTS</h6>
+      <div class="footer-contacts-content">
+        <div class="footer-contacts-left">
+          <p>Kazakhstan, Astana, Astana IT University, 3rd floor, C1.1.350</p>
+          <p>Mon — Sat 10:00–20:00</p>
+        </div>
+        <div class="footer-contacts-right">
+          <p><strong>+7–700–000–00–00</strong></p>
+          <p><strong>+7–701–111–11–11</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-button">
+      <a href="contacts.html">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Tazdarbay Meiirzhan, Mukhamejanov Aidos, Uatkanova Aruzhan, Abdimazhit Inkar IT-2408
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jewelry Catalog - Bijouterie Boutique</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header-flex">
+    <img src="images/logo.png" alt="Bijouterie Boutique Logo" style="width: 75px; height: 75px;">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="catalog.html" class="active">Catalog</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="auth.html" id="auth-link">Login</a></li>
+        <li><a href="profile.html" id="profile-link" style="display:none;">Profile</a></li>
+        <li><a href="#" id="logout-btn" style="display:none;">Logout</a></li>
+      </ul>
+    </nav>
+     <div class="theme-toggle">
+      <button id="theme-switcher">🌙</button>
+    </div>
+    <div class="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="images/video/catalog.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</header>
+
+<main>
+  <section class="catalog-header">
+    <div class="container">
+      <h1>Our Jewelry Collection</h1>
+      <p>Discover exquisite pieces crafted with precision and passion</p>
+    </div>
+  </section>
+<section id="blinds" class="carousel-section2">
+  <h2>Necklaces</h2>
+  <div class="carousel-container2">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track2')">
+      &#10094;
+    </button>
+    <div class="carousel-track2" id="carousel-track2">
+      <div class="carousel-card2">
+        <img src="images/catalog/ct1.jpg" alt="Icon Round Diamond Pendant - minimalist diamond necklace">
+        <h5>Icon Diamond Pendant</h5>
+        <p>75 600 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/catalog/ct2.jpg" alt="Icon Heart Shape Diamond Pendant - romantic heart design">
+        <h5>Bougie Diamond Pendant</h5>
+        <p>35 200 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/catalog/ct3.jpg" alt="Butterfly Silhouette Diamond Mini Pendant - delicate butterfly design">
+        <h5>Butterfly Silhouette Diamond Pendant</h5>
+        <p>56 500 000 kzt</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track2')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators2"></div>
+</section>
+
+ <section class="carousel-section1">
+  <h2>Bracelets & Bangles</h2>
+  <div class="carousel-container">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track3')">
+      &#10094;
+    </button>
+    <div class="carousel-track" id="carousel-track3">
+      <div class="carousel-card">
+        <img src="images/catalog2/ct21.jpg" alt="Round Diamond Slim Bracelet - elegant diamond tennis bracelet">
+        <h5>Round Diamond Slim Bracelet</h5>
+        <p>18 000 000 kzt</p>
+      </div>
+      <div class="carousel-card">
+        <img src="images/catalog2/ct22.jpg" alt="Round Diamond Slim Bracelet - classic diamond line bracelet">
+        <h5>Celestia Bracelet</h5>
+        <p>8 500 000 kzt</p>
+      </div>
+      <div class="carousel-card">
+        <img src="images/catalog2/ct23.jpg" alt="Slim Emerald Cut Diamond Bracelet - sophisticated emerald cut diamonds">
+        <h5>Emerald Cut Diamond Bracelet</h5>
+        <p>87 000 000 kzt</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track3')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators3"></div>
+</section>
+
+ <section id="plisse" class="carousel-section2">
+  <h2>Earrings</h2>
+  <div class="carousel-container2">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track4')">
+      &#10094;
+    </button>
+    <div class="carousel-track2" id="carousel-track4">
+      <div class="carousel-card2">
+        <img src="images/catalog3/ear1.jpg" alt="Wooden Bead Bracelets - natural wood and gold combination">
+        <h5>Bead Bracelets</h5>
+        <p>4 500 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/catalog3/ear2.jpg" alt="Icon Pear Shape Diamond Earrings - elegant pear drop earrings">
+        <h5>IconDiamond Earrings</h5>
+        <p>7 500 000 kzt</p>
+      </div>
+      <div class="carousel-card2">
+        <img src="images/catalog3/ear3.jpg" alt="Icon Heart Shape Diamond Stud Earrings - romantic heart studs">
+        <h5>Emerald Diamond Stud Earrings</h5>
+        <p>6 000 000 kzt</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track4')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators4"></div>
+</section>
+ <section class="search-section">
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search for jewelry...">
+    <button id="search-btn">🔍</button>
+  </div>
+
+  <div class="filters">
+    <select id="category-filter">
+      <option value="">All Categories</option>
+      <option value="necklace">Necklaces</option>
+      <option value="bracelet">Bracelets</option>
+      <option value="earrings">Earrings</option>
+    </select>
+
+    <select id="price-filter">
+      <option value="">All Prices</option>
+      <option value="0-10000000">Under 10M</option>
+      <option value="10000000-50000000">10M - 50M</option>
+      <option value="50000000-100000000">50M - 100M</option>
+      <option value="100000000">Over 100M</option>
+    </select>
+  </div>
+</section>
+
+<!-- Products container -->
+<section class="catalog-grid">
+  <div id="products-container"></div>
+  <p id="no-results" style="display:none;">No matching products found 😢</p>
+</section>
+
+
+  <section class="products-section">
+    <div class="container">
+      <div id="products-container" class="products-grid"></div>
+      <div id="no-results" style="display:none; text-align:center; padding:2rem;">
+        <h3>No products found</h3>
+        <p>Try adjusting your search criteria</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to receive updates on new collections and exclusive offers</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="footer-container container">
+    <div class="footer-logo">
+      <img src="images/logo.png" alt="Bijouterie Boutique Logo" class="footer-logo-img">
+      <p class="footer-brand">MAIA Bijouterie Boutique</p>
+      <small>Luxury Jewelry Since 2025</small>
+    </div>
+
+    <div class="footer-links">
+      <h6>QUICK LINKS</h6>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-subscribe">
+      <h6>NEWSLETTER</h6>
+      <form id="footer-newsletter" class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="footer-contacts">
+      <h6>CONTACTS</h6>
+      <div class="footer-contacts-content">
+        <div class="footer-contacts-left">
+          <p>Kazakhstan, Astana, Astana IT University, 3rd floor, C1.1.350</p>
+          <p>Mon — Sat 10:00–20:00</p>
+        </div>
+        <div class="footer-contacts-right">
+          <p><strong>+7 700 000 00 00</strong></p>
+          <p><strong>+7 701 111 11 11</strong></p>
+          <p><strong>+7 708 464 54 09</strong></p> <!-- ✅ Added your phone number -->
+        </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Bijouterie Boutique | Developed by <strong>A. Inkar</strong>, <strong>M. Aidos</strong>, <strong>U. Aruzhan</strong>, <strong>T. Meiirzhan</strong> (IT-2408)</p>
+  </div>
+</footer>
+
+
+<script src="js/script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>
